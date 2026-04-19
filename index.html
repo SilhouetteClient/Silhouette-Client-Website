@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="public/logo2.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silhouette Client</title>
+  <meta name="description" content="Silhouette Client">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="src/style.css">
+
+  <style>
+    .panorama-bg {
+      background-image: url('public/TU7_Panorama_Background_S.png') !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="panorama-bg"></div>
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+
+    <div class="menu-container">
+      <header class="menu-header">
+        <img src="public/MenuTitle.png" alt="Silhouette Client" class="menu-title">
+        <button id="audio-toggle" class="audio-btn" title="Toggle Music">
+          <i class="fas fa-volume-up"></i>
+        </button>
+      </header>
+
+      <div class="menu-content-wrapper" style="margin-top: 40px;">
+        <main class="menu-content">
+          <section class="tab-content active" id="maintenance"
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 20px; text-align: center;">
+            <img src="public/logo.png" alt="Emerald" class="pixel-icon"
+              style="width: 120px; height: 120px; margin-bottom: 30px;">
+            <h1
+              style="font-size: clamp(2rem, 8vw, 3.5rem); color: #fff; text-shadow: 4px 4px 0 #000; margin-bottom: 20px; font-family: var(--font-pixel);">
+              Words from the Owner.</h1>
+            <p
+              style="font-size: clamp(1rem, 4vw, 1.8rem); color: #fff; line-height: 1.4; max-width: 600px; margin-bottom: 40px;">
+              What's good its me dylanr4k. I've been working my ass off trying to turn silhouette client into a actual minecraft client. But that shits so ass to do so im bringing back silhouette client as a lce launcher which will be 10x better then before.</p>
+            <p
+              style="font-size: clamp(1rem, 3vw, 1.5rem); color: #fff; line-height: 1.4; max-width: 600px; margin-bottom: 40px;">
+              Join our Discord for updates.
+            </p>
+            <div class="action-buttons">
+              <a href="https://discord.gg/Pu5QmGDdNM" class="main-btn join-discord" target="_blank"
+                style="width: 320px;">
+                <div class="btn-content">
+                  <span class="btn-title">Join Discord</span>
+                </div>
+                <img src="public/discord-icon.jpg" class="btn-icon-discord">
+              </a>
+            </div>
+          </section>
+        </main>
+
+        <footer class="menu-footer">
+          <div class="version-info" style="width: 100%; justify-content: center;">
+            <div class="version-dot" style="background: #ff3f3f; box-shadow: 0 0 10px #ff3f3f;"></div>
+            DylanR4k &copy; 2026
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audioBtn = document.getElementById('audio-toggle');
+      let isMuted = localStorage.getItem('emerald-muted') === 'true';
+
+      const updateUI = () => {
+        if (audioBtn) {
+          audioBtn.classList.toggle('muted', isMuted);
+          const icon = audioBtn.querySelector('i');
+          if (icon) icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        }
+      };
+
+      updateUI();
+
+      audioBtn?.addEventListener('click', () => {
+        isMuted = !isMuted;
+        localStorage.setItem('emerald-muted', isMuted);
+        updateUI();
+      });
+    });
+  </script>
+</body>
+
+</html>

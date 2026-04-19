@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emerald Legacy Launcher | Play Minecraft Legacy Edition</title>
+  <meta name="description"
+    content="The ultimate launcher for Minecraft Legacy Console Edition builds. Streamlined, themed, and built for the community.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="panorama-bg"></div>
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+
+    <div class="menu-container">
+      <header class="menu-header">
+        <img src="MenuTitle.png" alt="Emerald Legacy" class="menu-title">
+        <button id="audio-toggle" class="audio-btn" title="Toggle Music">
+          <i class="fas fa-volume-up"></i>
+        </button>
+      </header>
+
+      <nav class="menu-tabs">
+        <button class="arrow-btn" id="prev-tab">LB</button>
+
+        <div class="tabs-wrapper">
+          <button class="tab-item active" data-tab="home">Home</button>
+          <button class="tab-item" data-tab="features">Features</button>
+          <button class="tab-item" data-tab="media">Media</button>
+          <button class="tab-item" data-tab="download">Download</button>
+        </div>
+
+        <button class="arrow-btn" id="next-tab">RB</button>
+      </nav>
+
+      <div class="menu-content-wrapper">
+        <main class="menu-content">
+          <section class="tab-content active" id="home">
+            <div class="home-layout">
+              <div class="features-row">
+                <div class="feature-card">
+                  <div class="feature-image">
+                    <img src="logo.png" alt="Emerald" class="pixel-icon">
+                  </div>
+                  <div class="feature-info">
+                    <h3>Authentic UI</h3>
+                    <p>A launcher built to feel like an extension of the game itself.</p>
+                  </div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-image">
+                    <img src="potion.png" alt="Potion" class="pixel-icon">
+                  </div>
+                  <div class="feature-info">
+                    <h3>Optimized Speed</h3>
+                    <p>Rapid launching and peak game performance.</p>
+                  </div>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-image">
+                    <img src="controller.png" alt="Controller" class="pixel-icon">
+                  </div>
+                  <div class="feature-info">
+                    <h3>Classic Support</h3>
+                    <p>Tailored for the legacy console edition community.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-section">
+                <h2>Ready to Play?</h2>
+                <p>Join the Discord or download the launcher.</p>
+              </div>
+
+              <div class="bottom-actions">
+                <div class="branding-group">
+                  <img src="logo.png" alt="Emerald Legacy" class="pixel-logo">
+                  <div class="branding-text">
+                    <span class="brand-name">Emerald</span>
+                    <span class="brand-sub">Legacy</span>
+                  </div>
+                </div>
+
+                <div class="action-buttons">
+                  <a href="https://github.com/Emerald-Legacy-Launcher/Emerald-Legacy-Launcher/releases/latest"
+                    class="main-btn get-launcher" id="main-download-btn">
+                    <div class="btn-content">
+                      <span>Get Launcher</span>
+                    </div>
+                    <img src="logo.png" class="btn-icon">
+                  </a>
+                  <a href="https://github.com/Emerald-Legacy-Launcher/Emerald-Legacy-Launcher"
+                    class="main-btn github-repo" target="_blank">
+                    <div class="btn-content">
+                      <span class="btn-title">GitHub Repo</span>
+                    </div>
+                    <img src="github-icon.png" class="btn-icon-github">
+                  </a>
+                  <a href="https://discord.gg/RHGRUwpmVc" class="main-btn join-discord" target="_blank">
+                    <div class="btn-content">
+                      <span class="btn-title">Join Discord</span>
+                    </div>
+                    <img src="discord-icon.jpg" class="btn-icon-discord">
+                  </a>
+                  <a href="https://fluxer.gg/s9ySzCPb" class="main-btn join-fluxer" target="_blank">
+                    <div class="btn-content">
+                      <span class="btn-title">Join Fluxer</span>
+                    </div>
+                    <img src="fluxer.svg" class="btn-icon">
+                  </a>
+
+                </div>
+
+                <div class="screenshot-carousel">
+                  <div class="carousel-container">
+                    <div class="carousel-header">Community Screenshots</div>
+                    <div class="carousel-view">
+                      <button class="carousel-arrow left">L</button>
+                      <img src="Community/image.png" class="carousel-img">
+                      <button class="carousel-arrow right">R</button>
+                    </div>
+                    <div class="carousel-footer">See more in Discord</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-content" id="features">
+            <div class="features-layout scroll-content">
+              <div class="overview-section">
+                <div class="overview-box">
+                  <h2>Project Overview</h2>
+                  <p>Emerald Legacy started as a solo project to create a better way to play Legacy Console Edition. Our
+                    team brings together expertise from various preservation projects into one definitive hub.</p>
+                </div>
+                <div class="philosophy-box">
+                  <h2>Our Philosophy</h2>
+                  <p>Built on a modern Rust/Tauri stack, we deliver a high-performance, cross-platform experience that
+                    uses only ~15MB of RAM, leaving all resources for the game.</p>
+                </div>
+              </div>
+
+              <div class="core-features-grid">
+                <div class="grid-item">
+                  <div class="item-icon"><i class="fas fa-magic"></i></div>
+                  <div class="item-text">
+                    <h3>Easy Setup</h3>
+                    <p>Automated installation for TU19 and TU24, with more versions coming soon.</p>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="item-icon"><i class="fab fa-rust"></i></div>
+                  <div class="item-text">
+                    <h3>Rust Backend</h3>
+                    <p>Memory-safe operations and game execution with minimal overhead.</p>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="item-icon"><i class="fas fa-sliders"></i></div>
+                  <div class="item-text">
+                    <h3>Easy Config</h3>
+                    <p>Integrated settings to manage your username and game parameters directly.</p>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="item-icon"><i class="fas fa-rocket"></i></div>
+                  <div class="item-text">
+                    <h3>Tauri Frontend</h3>
+                    <p>Lightweight UI and configuration management via modern webview.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-footer">
+                <div class="roadmap-link">
+                  <a href="https://github.com/orgs/Emerald-Legacy-Launcher/projects/2">DEVELOPMENT ROADMAP &rarr;</a>
+                </div>
+                <div class="acknowledgments">
+                  <p>Developed by the Emerald Team. Original creators: 4J Studios & Mojang.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-content" id="media">
+            <div class="features-layout scroll-content">
+              <div class="overview-box" style="text-align: center;">
+                <h2>Launcher Screenshots</h2>
+                <p>Experience the definitive way to launch and manage your legacy console editions.</p>
+              </div>
+
+              <div class="gallery-grid launcher-previews">
+                <div class="gallery-item large">
+                  <div class="gallery-frame">
+                    <img src="Launcher/home.png" alt="Launcher Home">
+                    <div class="frame-caption">Interface</div>
+                  </div>
+                </div>
+                <div class="gallery-item large">
+                  <div class="gallery-frame">
+                    <img src="Launcher/versions.png" alt="Version Selection">
+                    <div class="frame-caption">Versions</div>
+                  </div>
+                </div>
+                <div class="gallery-item large">
+                  <div class="gallery-frame">
+                    <img src="Launcher/settings.png" alt="Launcher Settings">
+                    <div class="frame-caption">Settings</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overview-box" style="text-align: center; margin-top: 40px;">
+                <h2>Community Gallery</h2>
+                <p>A collection of moments and creations shared by the Emerald Legacy community.</p>
+              </div>
+
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image.png" alt="Community Shot">
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image2.png" alt="Community Shot">
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image3.png" alt="Community Shot">
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image4.png" alt="Community Shot">
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image5.png" alt="Community Shot">
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="gallery-frame">
+                    <img src="Community/image6.png" alt="Community Shot">
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-footer" style="background: #3c3c3c; padding: 20px; border: 4px solid #1a1a1a;">
+                <div class="disclaimer-text">
+                  <h3>Share Your Creations</h3>
+                  <p>Join our Discord to feature your screenshots and videos on our official website!</p>
+                </div>
+                <div class="roadmap-link">
+                  <a href="https://discord.gg/RHGRUwpmVc" class="main-btn"
+                    style="width: 180px; height: 44px; font-size: 1rem;">JOIN DISCORD</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-content" id="download">
+            <div class="features-layout">
+              <div class="overview-box" style="text-align: center;">
+                <h2>Get Emerald Legacy</h2>
+                <p>Select your operating system to view available installers and architectures.</p>
+              </div>
+
+              <div class="os-grid">
+                <div class="os-card">
+                  <div class="os-icon"><i class="fab fa-windows"></i></div>
+                  <h3>Windows</h3>
+                  <button class="main-btn os-btn" id="download-win">Select Version</button>
+                </div>
+                <div class="os-card">
+                  <div class="os-icon"><i class="fab fa-linux"></i></div>
+                  <h3>Linux</h3>
+                  <button class="main-btn os-btn" id="download-linux">Select Version</button>
+                </div>
+                <div class="os-card">
+                  <div class="os-icon"><i class="fab fa-apple"></i></div>
+                  <h3>macOS</h3>
+                  <button class="main-btn os-btn" id="download-macos">Select Version</button>
+                </div>
+              </div>
+
+              <div class="alpha-disclaimer" style="margin-top: auto; border-color: #7c7c7c;">
+                <div class="item-icon">⚠️</div>
+                <div class="disclaimer-text">
+                  <h3>Windows SmartScreen</h3>
+                  <p>Because the launcher is unsigned, Windows may show a warning. Click <strong>"More info"</strong>
+                    and then <strong>"Run anyway"</strong> to proceed safely.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="menu-footer">
+          <div class="legends">
+            <div class="legend-item"><span class="legend-icon">A</span> Select</div>
+            <div class="legend-item"><span class="legend-icon">B</span> Back</div>
+          </div>
+          <div class="version-info">
+            <div class="version-dot"></div>
+            EMERALD LEGACY LAUNCHER &copy; 2026
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <div id="download-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="header-left">
+          <h2 id="modal-title">Select Downloader</h2>
+          <div class="nightly-toggle-wrapper">
+            <label class="switch">
+              <input type="checkbox" id="nightly-toggle">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Nightly</span>
+          </div>
+        </div>
+        <button id="close-modal" class="close-btn">X</button>
+      </div>
+      <div id="modal-options" class="modal-options-grid">
+        <!-- Dynamic download buttons will be inserted here -->
+      </div>
+      <div class="modal-footer">
+        <p>Choose the format that works best for your system.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="image-modal" class="modal-overlay">
+    <div class="image-modal-content">
+      <button id="close-image-modal" class="close-btn expansion-close">X</button>
+      <img id="expanded-image" src="" alt="Expanded Preview">
+    </div>
+  </div>
+
+  <script type="module" src="src/main.ts"></script>
+</body>
+
+</html>
